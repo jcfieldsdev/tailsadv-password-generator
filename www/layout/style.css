@@ -1,0 +1,410 @@
+@font-face {
+	font-family: "Advent Pro";
+	font-weight: normal;
+	font-style: normal;
+	src: url(fonts/AdventPro-Light.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: "Advent Pro";
+	font-style: normal;
+	font-weight: bold;
+	src: url(fonts/AdventPro-Bold.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: "Software Tester 7";
+	src: url(fonts/SoftwareTester7.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: "Libel Suit";
+	src: url(fonts/LibelSuit.woff2) format("woff2");
+}
+
+@keyframes float {
+	100% {
+		margin-bottom: 0;
+		margin-top: 3px;
+	}
+
+	50% {
+		margin-bottom: 3px;
+		margin-top: 0;
+	}
+}
+
+:root {
+	--dark-blue: #002c6a;
+	--medium-blue: #00408d;
+	--light-blue: #0056b9;
+	--base-blue: #016fde;
+	--medium-orange: #ffb800;
+	--light-orange: #ffeab7;
+}
+
+a {
+	background: none;
+	color: var(--medium-orange);
+	font-weight: bold;
+}
+
+a, button:not(:disabled) {
+	cursor: pointer;
+}
+
+a:hover, a:active {
+	background: none;
+	color: var(--light-orange);
+	transition: 0.5s color;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body, html, main, section {
+	height: 100%;
+}
+
+button {
+	font-family: inherit;
+	font-size: 0.75rem;
+}
+
+button#warnings {
+	margin: 8em 0 2em;
+}
+
+button:focus, textarea:focus {
+	outline: 0;
+}
+
+button:not(:disabled):hover {
+	outline: 1px solid #fff;
+}
+
+div#overlay table {
+	width: 100%;
+}
+
+div#overlay {
+	background: var(--base-blue);
+	color: inherit;
+	left: 50%;
+	opacity: 0;
+	max-height: 75%;
+	max-width: 75%;
+	overflow: auto;
+	padding: 2em;
+	position: fixed;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	visibility: hidden;
+	width: 50em;
+	z-index: 3;
+}
+
+div#overlay button {
+	background: var(--light-blue);
+	color: inherit;
+}
+
+div#overlay button, section#password button {
+	border: 0;
+	letter-spacing: 0.25em;
+	padding: 1em 2em;
+	text-transform: uppercase;
+}
+
+div#overlay>p button {
+	margin-top: 2em;
+}
+
+div#overlay.open {
+	opacity: 1;
+	transition: 0.5s opacity;
+	visibility: visible;
+}
+
+fieldset {
+	border: 4px solid var(--light-blue);
+	margin: 2em auto;
+	width: min-content;
+}
+
+fieldset#seafox legend img, footer img {
+	animation: float 1.5s linear infinite;
+	margin-top: 3px;
+}
+
+fieldset.items button {
+	background: none;
+	border: 0;
+	color: inherit;
+	padding: 0;
+}
+
+fieldset.items button:not(.active) img, section#password button:disabled {
+	opacity: 0.25;
+}
+
+fieldset.items div {
+	display: grid;
+	grid-gap: 8px 8px;
+	grid-template-columns: auto auto auto auto;
+	padding: 1em;
+}
+
+fieldset.items div img {
+	height: 48px;
+	width: 48px;
+}
+
+footer {
+	bottom: 0;
+	min-height: 35px;
+}
+
+footer, header {
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	white-space: nowrap;
+	z-index: 2;
+}
+
+header {
+	top: 1em;
+}
+
+h1 {
+	background: none;
+	color: var(--medium-orange);
+	font-size: 3rem;
+}
+
+h1, h2 {
+	font-family: "Libel Suit", sans-serif;
+	font-weight: normal;
+}
+
+h1, h2, textarea {
+	text-shadow: 2px 2px #000;
+}
+
+h2 {
+	font-size: 2rem;
+	margin: 9rem 0 2rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+html {
+	background: var(--base-blue);
+	color: #fff;
+	font: 12pt/150% "Advent Pro", sans-serif;
+	padding: 0;
+}
+
+img {
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+}
+
+img.sprite {
+	height: 32px;
+	vertical-align: middle;
+	width: 32px;
+}
+
+label {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+legend {
+	background: var(--light-blue);
+	color: var(--medium-orange);
+	font-size: 1.25rem;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1px 1px #000;
+	width: 100%;
+}
+
+main {
+	display: flex;
+}
+
+noscript {
+	position: absolute;
+	left: 50%;
+	text-align: center;
+	top: 5em;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+section {
+	flex-grow: 1;
+	width: 33%;
+	z-index: 1;
+}
+
+section#items {
+	background: var(--dark-blue);
+	color: inherit;
+	margin: auto;
+}
+
+section#password {
+	background: var(--light-blue);
+	color: inherit;
+	text-align: center;
+}
+
+section#password button {
+	background: var(--base-blue);
+	color: inherit;
+	width: 16em;
+}
+
+section#stages {
+	background: var(--medium-blue);
+	color: inherit;
+}
+
+section#stages label.checked {
+	font-weight: bold;
+}
+
+section#stages ul {
+	margin: 1em auto;
+	white-space: nowrap;
+	width: min-content;
+}
+
+section>div {
+	height: calc(100% - 15rem);
+	overflow: auto;
+}
+
+span.highlight {
+	font-weight: bold;
+}
+
+td {
+	text-align: left;
+	vertical-align: middle;
+}
+
+td button {
+	font-size: 0.5rem;
+	line-height: 100%;
+}
+
+textarea {
+	background: none;
+	border: 0;
+	color: inherit;
+	font-family: "Software Tester 7", monospace;
+	font-size: 3.5rem;
+	height: 4.5em;
+	letter-spacing: 0.25em;
+	line-height: 100%;
+	overflow: hidden;
+	padding-left: 0.25em;
+	resize: none;
+	text-align: center;
+	text-transform: uppercase;
+	width: 4em;
+}
+
+ul {
+	font-size: 1.5rem;
+	line-height: 150%;
+	list-style: none;
+}
+
+@media (max-width: 960px) {
+	body, html, main, section {
+		height: auto;
+	}
+
+	button#reset {
+		margin-bottom: 4em;
+	}
+
+	button#warnings {
+		margin-top: 2em;
+	}
+
+	fieldset.items div {
+		grid-template-columns: auto auto auto auto auto auto auto auto;
+	}
+
+	footer {
+		background: var(--light-blue);
+		color: #fff;
+	}
+
+	footer, header {
+		position: static;
+		text-align: center;
+		transform: none;
+	}
+
+	h2 {
+		margin-top: 1em;
+	}
+
+	html {
+		background: var(--dark-blue);
+		color: #fff;
+	}
+
+	main {
+		flex-direction: column;
+	}
+
+	section {
+		width: 100%;
+	}
+
+	section#stages ul {
+		column-count: 2;
+		margin: 1em auto;
+	}
+
+	section>div {
+		height: auto;
+		overflow: visible;
+	}
+}
+
+@media (max-width: 640px) {
+	fieldset.items div {
+		grid-template-columns: auto auto auto auto;
+	}
+
+	footer, header {
+		line-height: 300%;
+		white-space: normal;
+	}
+
+	section#stages ul {
+		column-count: initial;
+		margin: 1em auto;
+	}
+}
+
+@media (prefers-reduced-motion) {
+	fieldset#seafox legend img, footer img {
+		animation: none;
+		padding-top: 0;
+	}
+}

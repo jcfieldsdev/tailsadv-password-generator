@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Tails Adventure Password Generator</title>
+<meta charset="utf-8">
+<meta name="title" content="Tails Adventure Password Generator">
+<meta name="description" content="Generates passwords for Tails Adventure.">
+<meta name="viewport" content="initial-scale=1.0">
+<link href="mailto:jcfields@jcfields.dev" rel="author" title="J.C. Fields">
+<link href="layout/style.css" media="screen" rel="stylesheet" type="text/css">
+<link href="layout/favicon.png" rel="shortcut icon" type="image/png">
+<link href="layout/homeicon.png" rel="apple-touch-icon-precomposed" type="image/png">
+<script src="scripts/data.js" type="text/javascript"></script>
+<script src="scripts/passgen.js" type="text/javascript"></script></head>
+<body><header><h1>Tails Adventure Password Generator</h1></header>
+<main><noscript><p>Must have JavaScript enabled.</p></noscript>
+<section id="items"><h2>Items</h2>
+<div>
+	<fieldset id="tails" class="items"><legend><img src="images/tails-walking.png" alt="[Tails sprite]" title="Tails" class="sprite"> Tails</legend>
+		<div><button type="button" value="regularBomb" disabled="disabled" class="active"><img src="images/item-tails-regularbomb.png" alt="Regular Bomb" title="Regular Bomb&mdash;Initially available."></button>
+		<button type="button" value="largeBomb"><img src="images/item-tails-largebomb.png" alt="Large Bomb" title="Large Bomb&mdash;Found in Polly Mountain 2."></button>
+		<button type="button" value="remoteBomb"><img src="images/item-tails-remotebomb.png" alt="Remote Bomb" title="Remote Bomb&mdash;Found in Volcanic Tunnel."></button>
+		<button type="button" value="napalmBomb"><img src="images/item-tails-napalmbomb.png" alt="Napalm Bomb" title="Napalm Bomb&mdash;Found in Cavern Island."></button>
+		<button type="button" value="tripleBomb"><img src="images/item-tails-triplebomb.png" alt="Triple Bomb" title="Triple Bomb&mdash;Found in Caron Forest."></button>
+		<button type="button" value="wrench"><img src="images/item-tails-wrench.png" alt="Wrench" title="Wrench&mdash;Found in Battle Fortress 2."></button>
+		<button type="button" value="helmet"><img src="images/item-tails-helmet.png" alt="Helmet" title="Helmet&mdash;Found in Polly Mountain 1."></button>
+		<button type="button" value="remoteRobot"><img src="images/item-tails-remoterobot.png" alt="Remote Robot" title="Remote Robot&mdash;Found in Poloy Forest."></button>
+		<button type="button" value="hammer"><img src="images/item-tails-hammer.png" alt="Hammer" title="Hammer&mdash;Found in Volcanic Tunnel."></button>
+		<button type="button" value="teleportDevice"><img src="images/item-tails-teleportdevice.png" alt="Teleport Device" title="Teleport Device&mdash;Found in Coco Island."></button>
+		<button type="button" value="nightVision"><img src="images/item-tails-nightvision.png" alt="Night Vision" title="Night Vision&mdash;Found in Green Island."></button>
+		<button type="button" value="speedBoots"><img src="images/item-tails-speedboots.png" alt="Speed Boots" title="Speed Boots&mdash;Found in Poloy Forest."></button>
+		<button type="button" value="superGlove"><img src="images/item-tails-superglove.png" alt="Super Glove" title="Super Glove&mdash;Found in Polly Mountain 1."></button>
+		<button type="button" value="fang"><img src="images/item-tails-fang.png" alt="Fang" title="Fang&mdash;Found in Polly Mountain 2."></button>
+		<button type="button" value="knuckles"><img src="images/item-tails-knuckles.png" alt="Knuckles" title="Knuckles&mdash;Found in Polly Mountain 1."></button>
+		<button type="button" value="sonic"><img src="images/item-tails-sonic.png" alt="Sonic" title="Sonic&mdash;Found in Caron Forest."></button>
+		<button type="button" value="itemRadar"><img src="images/item-tails-itemradar.png" alt="Item Radar" title="Item Radar&mdash;Found in Polly Mountain 2."></button>
+		<button type="button" value="radio"><img src="images/item-tails-radio.png" alt="Radio" title="Radio&mdash;Found in Poloy Forest."></button>
+		<button type="button" value="blueEmerald"><img src="images/item-emerald-blue.png" alt="Blue Emerald" title="Blue Emerald&mdash;Found in Caron Forest."></button>
+		<button type="button" value="greenEmerald"><img src="images/item-emerald-green.png" alt="Green Emerald" title="Green Emerald&mdash;Found in Volcanic Tunnel."></button>
+		<button type="button" value="purpleEmerald"><img src="images/item-emerald-purple.png" alt="Purple Emerald" title="Purple Emerald&mdash;Found in Polly Mountain 1."></button>
+		<button type="button" value="redEmerald"><img src="images/item-emerald-red.png" alt="Red Emerald" title="Red Emerald&mdash;Found in Poloy Forest."></button>
+		<button type="button" value="whiteEmerald"><img src="images/item-emerald-white.png" alt="White Emerald" title="White Emerald&mdash;Found in Green Island."></button>
+		<button type="button" value="yellowEmerald"><img src="images/item-emerald-yellow.png" alt="Yellow Emerald" title="Yellow Emerald&mdash;Found in Coco Island."></button></div>
+	</fieldset>
+	<fieldset id="seafox" class="items"><legend><img src="images/seafox.png" alt="[Sea Fox sprite]" title="Sea Fox" class="sprite"> Sea Fox</legend>
+		<div><button type="button" value="protonTorpedo"><img src="images/item-seafox-protontorpedo.png" alt="Proton Torpedo" title="Proton Torpedo&mdash;Found in Caron Forest."></button>
+		<button type="button" value="vulcanGun" disabled="disabled" class="active"><img src="images/item-seafox-vulcangun.png" alt="Vulcan Gun" title="Vulcan Gun&mdash;Initially available."></button>
+		<button type="button" value="extraSpeed"><img src="images/item-seafox-extraspeed.png" alt="Extra Speed" title="Extra Speed&mdash;Found in Green Island."></button>
+		<button type="button" value="extraArmor"><img src="images/item-seafox-extraarmor.png" alt="Extra Armor" title="Extra Armor&mdash;Found in Volcanic Tunnel."></button>
+		<button type="button" value="antiAirMissile"><img src="images/item-seafox-antiairmissile.png" alt="Anti-air Missile" title="Anti-air Missile&mdash;Found in Cavern Island."></button>
+		<button type="button" value="spark"><img src="images/item-seafox-spark.png" alt="Spark" title="Spark&mdash;Found in Poloy Forest."></button>
+		<button type="button" value="mine"><img src="images/item-seafox-mine.png" alt="Mine" title="Mine&mdash;Found in Cavern Island."></button>
+		<button type="button" value="rocketBooster"><img src="images/item-seafox-rocketbooster.png" alt="Rocket Booster" title="Rocket Booster&mdash;Found in Polly Mountain 1."></button></div>
+	</fieldset>
+</div>
+</section>
+<section id="stages"><h2>Stages</h2>
+<div><ul><li><label><input type="checkbox" value="poloyForest"> Poloy Forest</label></li>
+<li><label><input type="checkbox" value="volcanicTunnel"> Volcanic Tunnel</label></li>
+<li><label><input type="checkbox" value="caronForest"> Caron Forest</label></li>
+<li><label><input type="checkbox" value="pollyMt1"> Polly Mountain 1</label></li>
+<li><label><input type="checkbox" value="pollyMt1Boss"> Polly Mountain 1 Boss</label></li>
+<li><label><input type="checkbox" value="lakeRocky"> Lake Rocky</label></li>
+<li><label><input type="checkbox" value="cavernIsland"> Cavern Island</label>
+<li><label><input type="checkbox" value="greenIsland"> Green Island</label>
+<li><label><input type="checkbox" value="lakeCrystal"> Lake Crystal</label>
+<li><label><input type="checkbox" value="lakeRockyPipe"> Lake Rocky Pipe</label>
+<li><label><input type="checkbox" value="cocoIsland"> Coco Island</label></li>
+<li><label><input type="checkbox" value="cocoIslandBoss"> Coco Island Boss</label></li>
+<li><label><input type="checkbox" value="pollyMt2"> Polly Mountain 2</label></li>
+<li><label><input type="checkbox" value="battleFortress1"> Battle Fortress 1</label></li>
+<li><label><input type="checkbox" value="battleFortress2Boss"> Battle Fortress 2 Mini-Boss</label></li></ul></div></section>
+<section id="password"><h2>Password</h2>
+<div><textarea readonly="readonly"></textarea>
+<div><button type="button" disabled="disabled" id="warnings">Warnings</button></div>
+<div><button type="button" id="reset">Reset</button></div></div></section>
+<div id="overlay"><table></table>
+<p><button type="button" id="close">Close</button></p></div></main>
+<footer>Created by <img src="images/tails-flying.png" alt="[Tails sprite]" title="Tails" class="sprite"> <a href="mailto:jcfields@jcfields.dev">J.C. Fields</a>. Hosted by <a href="https://github.com/jcfieldsdev/tailsadv-password-generator">GitHub</a>.</footer></body></html>
